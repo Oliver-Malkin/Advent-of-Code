@@ -1,14 +1,14 @@
 with open("Day 3/input.txt", "r") as file:
     items = file.read().split('\n')
 
-
+"""
 items = ['vJrwpWtwJgWrhcsFMMfFFhFp',
 'jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL',
 'PmmdzqPrVvPwwTWBwg',
 'wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn',
 'ttgJtRGJQctTZtZT',
 'CrZsJsPPZsGzwwsLwLmpwMDw']
-
+"""
 
 upper = ord('A')-27
 lower = ord('a')-1
