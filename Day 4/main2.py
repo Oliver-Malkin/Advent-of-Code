@@ -1,13 +1,6 @@
 with open("Day 4/input.txt", "r") as file:
     pairs = file.read().split('\n')
 
-pairs = """2-4,6-8
-2-3,4-5
-5-7,7-9
-2-8,3-7
-6-6,4-6
-2-6,4-8""".split('\n')
-
 overlapping = 0
 
 for i in range(len(pairs)):
@@ -16,7 +9,9 @@ for i in range(len(pairs)):
         pair[j] = pair[j].split('-')
     print(pair)
 
-    if (int(pair[0][0]) >= int(pair[1][0]) or int(pair[0][0]) <= int(pair[1][0])):
+    if int(pair[0][0]) <= int(pair[1][0]) and int(pair[0][1]) >= int(pair[1][1]) or int(pair[0][0]) >= int(pair[1][0]) and int(pair[0][1]) <= int(pair[1][1]):
+        overlapping += 1
+    elif int(pair[0][1]) >= int(pair[1][0]) and int(pair[0][0]) <= int(pair[1][1]) or int(pair[0][0]) <= int(pair[1][1]) and int(pair[1][0]) <= int(pair[0][1]):
         overlapping += 1
 
 print(overlapping)
